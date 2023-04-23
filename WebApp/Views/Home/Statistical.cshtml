@@ -1,0 +1,38 @@
+@page
+@model MvcApiApplication.Views.Home.Statistical
+
+@{
+    Layout = "_Layout";
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Statistics</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+<div class="chart-container">
+    <canvas id="chart1"></canvas>
+</div>
+<div class="chart-container">
+    <canvas id="chart2"></canvas>
+</div>
+<div>
+    <label for="region">Choose a region:</label>
+    <select name="region" id="region">
+        <option value="1">Rīga (centrs)</option>
+        <option value="2">Rīga (mikrorajoni)</option>
+        <option value="3">Jūrmala</option>
+    </select>
+</div>
+<script>
+            document.addEventListener('DOMContentLoaded', function (){
+                initStatisticalPage();
+            });
+        </script>
+</body>
+</html>

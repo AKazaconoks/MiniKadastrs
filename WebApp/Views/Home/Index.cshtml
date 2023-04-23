@@ -1,0 +1,33 @@
+@{
+    Layout = "_Layout";
+    ViewData["Title"] = "Dzīvokļu cenas un darījumi";
+}
+
+<h2>@ViewData["Title"]</h2>
+
+<input type="file" id="csvFile" accept=".csv" />
+<button id="uploadBtn">Upload CSV</button>
+
+<table id="transactionsTable" class="table">
+    <thead>
+        <tr>
+            <th>Gads un pusgads</th>
+            <th>Vidējā cena (EUR/m2) Rīga (centrs)</th>
+            <th>Darījumu skaits Rīga (centrs)</th>
+            <th>Vidējā cena (EUR/m2) Rīga (mikrorajoni)</th>
+            <th>Darījumu skaits Rīga (mikrorajoni)</th>
+            <th>Vidējā cena (EUR/m2) Jūrmala</th>
+            <th>Darījumu skaits Jūrmala</th>
+        </tr>
+    </thead>
+    <tbody>
+    </tbody>
+</table>
+
+@section Scripts {
+    <script>
+        $(document).ready(function () {
+            initIndexPage();
+        });
+    </script>
+}
